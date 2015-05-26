@@ -13,7 +13,7 @@
     },
     "autoload": {
         "psr-0": {
-            "acid-solutions\\LaravelPhantom": "src/"
+            "AcidSolutions\\LaravelPhantom": "src/"
         }
     },
     "minimum-stability": "stable"
