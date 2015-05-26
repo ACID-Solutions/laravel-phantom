@@ -1,0 +1,20 @@
+{
+    "name": "ACID-Solutions/laravel-phantom",
+    "description": "",
+    "authors": [
+        {
+            "name": "Daniel LUCAS",
+            "email": "contact@acid.fr"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "ACID-Solutions\\LaravelPhantom": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
