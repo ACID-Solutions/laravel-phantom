@@ -1,4 +1,4 @@
-<?php namespace Freyskeyd\LaravelPhantom;
+<?php namespace AcidSolutions\LaravelPhantom;
 
 use Illuminate\Support\Facades\Config;
 

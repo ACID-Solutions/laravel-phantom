@@ -1,4 +1,4 @@
-<?php namespace Freyskeyd\LaravelPhantom;
+<?php namespace AcidSolutions\LaravelPhantom;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -22,7 +22,7 @@ class LaravelPhantomServiceProvider extends ServiceProvider {
 		$this->app->booting(function()
         {
             $loader = \Illuminate\Foundation\AliasLoader::getInstance();
-            $loader->alias('PdfPhantom', 'Freyskeyd\LaravelPhantom\PdfPhantom');
+            $loader->alias('PdfPhantom', 'AcidSolutions\LaravelPhantom\PdfPhantom');
         });
 	}
 

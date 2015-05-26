@@ -1,6 +1,6 @@
 <?php
 
-namespace Freyskeyd\LaravelPhantom;
+namespace AcidSolutions\LaravelPhantom;
 
 use DateTime;
 

@@ -1,7 +1,7 @@
 <?php
 
 use Mockery as m;
-use Freyskeyd\LaravelPhantom\Phantom;
+use AcidSolutions\LaravelPhantom\Phantom;
 
 class InvoiceTest extends PHPUnit_Framework_TestCase {
 
@@ -12,11 +12,11 @@ class InvoiceTest extends PHPUnit_Framework_TestCase {
 
     public function testDownloadingInvoiceReturnsResponse()
 	{
-        $mm = m::mock('Freyskeyd\LaravelPhantom\PdfableInterface');
+        $mm = m::mock('AcidSolutions\LaravelPhantom\PdfableInterface');
         $mm->id = 1;
         $mm->shouldReceive('pdfPrefix')->andReturn('devis_');
 
-		$pdf = m::mock('Freyskeyd\LaravelPhantom\PdfPhantom[render,getPhantomProcess]', array($mm));
+		$pdf = m::mock('AcidSolutions\LaravelPhantom\PdfPhantom[render,getPhantomProcess]', array($mm));
 
 		$pdf->date = time();
 
