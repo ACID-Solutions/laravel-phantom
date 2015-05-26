@@ -1,5 +1,5 @@
 {
-    "name": "ACID-Solutions/laravel-phantom",
+    "name": "acid-solutions/laravel-phantom",
     "description": "",
     "authors": [
         {
@@ -13,7 +13,7 @@
     },
     "autoload": {
         "psr-0": {
-            "ACID-Solutions\\LaravelPhantom": "src/"
+            "acid-solutions\\LaravelPhantom": "src/"
         }
     },
     "minimum-stability": "stable"
