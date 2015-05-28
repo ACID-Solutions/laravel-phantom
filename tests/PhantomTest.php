@@ -20,7 +20,7 @@ class InvoiceTest extends PHPUnit_Framework_TestCase {
 
 		$pdf->date = time();
 
-		$workPath = realpath(__DIR__.'/../src/Freyskeyd/LaravelPhantom/work').'/'.md5(1).'.pdf';
+		$workPath = realpath(__DIR__.'/../src/AcidSolutions/LaravelPhantom/work').'/'.md5(1).'.pdf';
 
 		$pdf->shouldReceive('render')->once()->andReturn('rendered');
 

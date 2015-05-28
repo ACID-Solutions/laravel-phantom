@@ -71,5 +71,5 @@ page.open(system.args[1], function(status) {
 	window.setTimeout(function() {
 		page.render(system.args[4]);
 		phantom.exit();
-	}, 1000);
+	}, 3000);
 });

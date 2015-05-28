@@ -1,5 +1,5 @@
 # Laravel Phantom
-allezzz
+
 $pngGenerator = new LaravelPhantom();
 
 $capture = $pngGenerator->open(url)
@@ -16,6 +16,3 @@ if ( $capture->success() )
 
 
 $pdfGenerator = new LaravelPhantom();
-
-
-v0.0.6
