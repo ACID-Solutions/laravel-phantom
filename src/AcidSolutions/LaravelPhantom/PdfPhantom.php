@@ -204,7 +204,12 @@ class PdfPhantom
 	{
 		$args = func_get_args();
 		$output = array_shift($args);
-		$pdfs = $args;
+
+		if (isset($args[0]) && $args[0] && is_array($args[0])) {
+			$pdfs = $args[0];
+		} else {
+			$pdfs = $args;
+		}
 
 		foreach( $pdfs as $pdf )
 		{
