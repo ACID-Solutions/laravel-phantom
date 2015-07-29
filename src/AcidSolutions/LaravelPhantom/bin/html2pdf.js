@@ -22,7 +22,7 @@ var page        = new WebPage(),
 page.paperSize = {
 	format: 'A4',
 	orientation: 'portrait',
-	border: '20px',
+	border: '35px',
 	header: {
 		height: system.args[5] + 'cm',
 		contents: phantom.callback(function (pageNum, numPages) {
