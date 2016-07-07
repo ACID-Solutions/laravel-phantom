@@ -107,7 +107,7 @@ class PdfPhantom
 		$pdfId = $this->pdf->id;
 		
 		if (is_null($pdfId)) {
-			$pdfId = $this->pdf->pdfView() . '_' . time();
+			$pdfId = $this->pdf->pdfView() . '_' . microtime();
 		}
 
 		// create temporary file
