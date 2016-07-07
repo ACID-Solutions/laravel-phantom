@@ -104,10 +104,16 @@ class PdfPhantom
 
 	public function writeViewForImaging()
 	{
+		$pdfId = $this->pdf->id;
+		
+		if (is_null($pdfId)) {
+			$pdfId = $this->pdf->pdfView() . '_' . time();
+		}
+
 		// create temporary file
-		$generated_view = __DIR__ . '/html_dump/' . md5( $this->pdf->id ) . '.html';
-		$generated_header = __DIR__ . '/html_dump/' . md5( $this->pdf->id ) . '_header.html';
-		$generated_footer = __DIR__ . '/html_dump/' . md5( $this->pdf->id ) . '_footer.html';
+		$generated_view = __DIR__ . '/html_dump/' . md5($pdfId) . '.html';
+		$generated_header = __DIR__ . '/html_dump/' . md5($pdfId) . '_header.html';
+		$generated_footer = __DIR__ . '/html_dump/' . md5($pdfId) . '_footer.html';
 
 		// save contents of view to the file
 		$this->files->put($generated_view, $this->render('body'));
@@ -128,13 +134,13 @@ class PdfPhantom
 		switch ($pdfPart)
 		{
 			case 'header' :
-				$html = $this->header( $this->pdf->pdfHeaderData() )->render();
+				$html = $this->header($this->pdf->pdfHeaderData())->render();
 				break;
 			case 'footer' :
-				$html = $this->footer( $this->pdf->pdfFooterData() )->render();
+				$html = $this->footer($this->pdf->pdfFooterData())->render();
 				break;
 			default :
-				$html = $this->view( $this->pdf->pdfData() )->render();
+				$html = $this->view($this->pdf->pdfData())->render();
 				break;
 		}
 
