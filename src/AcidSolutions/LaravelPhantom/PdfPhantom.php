@@ -105,7 +105,7 @@ class PdfPhantom
 	public function writeViewForImaging()
 	{
 		$pdfId = $this->pdf->id;
-		
+
 		if (is_null($pdfId)) {
 			$pdfId = $this->pdf->pdfView() . '_' . microtime();
 		}
@@ -227,7 +227,7 @@ class PdfPhantom
 
 		$pdfs = implode(' ', $pdfs);
 
-		$command = 'pdftk ' . $pdfs . ' cat output ' . $output;
+		$command = 'pdfunite ' . $pdfs . ' ' . $output;
 		shell_exec($command);
 	}
 
